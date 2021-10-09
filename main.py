@@ -20,9 +20,9 @@ def start(message):
 def bot_message(message):
     if message.chat.type == 'privet':
         if message.text == 'привет':
-            bot.send_message(message.from_user.id 'Ку')
+            bot.send_message( 'Ку')
         else:
-            bot.send_message(message.from_user.id "пошли пить пиво")
+            bot.send_message( "пошли пить пиво")
 
 @server.route('/' + TOKEN, methods = ['POST'])
 def get_message():
