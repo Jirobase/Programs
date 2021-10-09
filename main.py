@@ -17,7 +17,7 @@ def bot_message(message):
     if message.chat.type == 'privet':
         if message.text == 'привет':
             bot.send_message('Ку')
-        else
+        else:
             bot.send_message("пошли пить пиво")
 
 @server.route('/' + TOKEN, methods = ['POST'])
