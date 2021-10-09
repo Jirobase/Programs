@@ -11,14 +11,18 @@ bot = telebot.TeleBot(TOKEN)
 
 server = Flask(__name__)
 
+@bot.message_handler(commands = ['start'])
+def start(message):
+    bot.send_message("Добро пожаловать, я Проваславный бот!")
+
 
 @bot.message_handler(content_types = ['text'])
 def bot_message(message):
     if message.chat.type == 'privet':
         if message.text == 'привет':
-            bot.send_message('Ку')
+            bot.send_message(message.from_user.id'Ку')
         else:
-            bot.send_message("пошли пить пиво")
+            bot.send_message(message.from_user.id"пошли пить пиво")
 
 @server.route('/' + TOKEN, methods = ['POST'])
 def get_message():
